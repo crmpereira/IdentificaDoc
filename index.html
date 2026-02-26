@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload de Documentos</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Bibliotecas para OCR e PDF -->
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script>
+        // Configurar worker do PDF.js
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header-actions">
+            <h1>Upload de Documento</h1>
+            <button id="btnOpenReadme" class="btn-info">?</button>
+        </div>
+        
+        <form id="uploadForm">
+            <div class="form-group">
+                <label for="docType">Tipo de Documento:</label>
+                <select id="docType" name="docType" required>
+                    <option value="" disabled selected>Selecione um tipo...</option>
+                    <option value="CPF">CPF</option>
+                    <option value="CNH">CNH</option>
+                    <option value="RG">RG</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="fileUpload" class="custom-file-upload">
+                    Escolher Arquivo (Imagem ou PDF)
+                </label>
+                <!-- O atributo accept sugere os tipos de arquivo, mas a validação JS garante a regra -->
+                <input type="file" id="fileUpload" name="fileUpload" accept="image/*,.pdf" required>
+                <div id="errorMessage" class="error-message"></div>
+            </div>
+
+            <div id="ocrStatus" class="status-message"></div>
+            <div id="ocrResult" class="ocr-result" style="display:none;"></div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- Modal do Readme -->
+    <div id="readmeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="readmeContent">Carregando instruções...</div>
+        </div>
+    </div>
+</body>
+</html>
