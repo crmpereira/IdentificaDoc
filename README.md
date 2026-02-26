@@ -4,7 +4,16 @@ Este projeto é uma prova de conceito (PoC) para validação automática de docu
 
 O sistema permite que o usuário faça upload de uma imagem ou PDF e verifica se o documento corresponde ao tipo selecionado, procurando por palavras-chave específicas.
 
-## 🚀 Como Funciona
+## � Imagens do Projeto
+
+### Interface Inicial
+*(Adicione aqui um print da tela inicial do projeto)*
+![Tela Inicial](screenshots/interface_inicial.png)
+
+### Exemplo de Documento Aceito
+![Exemplo de Documento](screenshots/exemplo_documento.jpg)
+
+## �🚀 Como Funciona
 
 1.  **Seleção do Tipo:** O usuário escolhe o tipo de documento que deseja enviar (CPF, CNH ou RG).
 2.  **Upload:** O usuário seleciona um arquivo (Imagem JPG/PNG ou PDF).
