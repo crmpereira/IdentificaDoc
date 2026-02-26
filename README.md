@@ -7,8 +7,7 @@ O sistema permite que o usuário faça upload de uma imagem ou PDF e verifica se
 ## � Imagens do Projeto
 
 ### Interface Inicial
-*(Adicione aqui um print da tela inicial do projeto)*
-![Tela Inicial](screenshots/interface_inicial.png)
+![Tela Inicial](screenshots/tela_inicial.jpg)
 
 ### Exemplo de Documento Aceito
 ![Exemplo de Documento](screenshots/exemplo_documento.jpg)
